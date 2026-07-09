@@ -1,0 +1,5 @@
+geopandas>=1.1
+pandas>=2.2
+shapely>=2.1
+matplotlib>=3.10
+ipykernel>=7.2

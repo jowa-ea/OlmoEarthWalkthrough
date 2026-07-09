@@ -1,0 +1,6 @@
+# Clones of the source data repos and any other regenerated scratch
+# output land here. The notebook recreates this folder on every run.
+workshop_prep/
+
+__pycache__/
+*.pyc
