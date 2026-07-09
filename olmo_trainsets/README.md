@@ -6,11 +6,10 @@ in this folder's parent directory. Both datasets carry an
 `{year}-04-15`, and are split into `_partNNN` files of up to 100,000
 rows/features each (OLMO's per-file limit).
 
-These are the **repo-only** counterparts of DS3/DS4 from the main
-`OLMO_WC_2026/OLMO_training/` pipeline — see that pipeline's
-`data/olmo/README.md` for the production versions, which additionally
-blend in 2026 stac-annotator annotations not covered by these two public
-repos.
+These are the **repo-only** counterparts of DS3/DS4 from the broader
+Ukraine winter-crop mapping pipeline. The production versions used
+operationally there additionally blend in 2026 stac-annotator
+annotations not covered by these two public repos.
 
 ---
 

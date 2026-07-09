@@ -11,9 +11,10 @@ reference/training data (CSV, GeoJSON).
 
 ## Run it
 
-- **Locally**: open `prepare_ds3_ds4_for_olmo.ipynb` in Jupyter with the
-  `geospatial` conda environment (geopandas, shapely, pandas, matplotlib)
-  as the kernel, and run all cells from this folder.
+- **Locally**: create a Python environment, install the dependencies
+  (`pip install -r requirements.txt`), open `prepare_ds3_ds4_for_olmo.ipynb`
+  in Jupyter with that environment as the kernel, and run all cells from
+  this folder.
 - **Google Colab**: open the notebook in Colab and run all cells — the
   first cells detect the Colab environment, install the missing
   geospatial packages, and clone this repo to pick up the bundled files
@@ -30,11 +31,11 @@ README there for column/class documentation):
   Summer crop), from `Uk_sample_units_22-25` (2022–2025).
 
 Both are reproduced from public GitHub repos only. The production
-versions of these datasets used operationally (in the main
-`OLMO_WC_2026/OLMO_training/` pipeline) additionally blend in 2026
-stac-annotator annotations that live outside these two repos — this
-workshop notebook intentionally reproduces the repo-sourced core only,
-to keep a clean "two repos in → two datasets out" story.
+versions of these datasets used operationally in the broader Ukraine
+winter-crop mapping pipeline additionally blend in 2026 stac-annotator
+annotations that live outside these two repos — this workshop notebook
+intentionally reproduces the repo-sourced core only, to keep a clean
+"two repos in → two datasets out" story.
 
 ## Folder contents
 

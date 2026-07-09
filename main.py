@@ -2,8 +2,9 @@
 """Script equivalent of prepare_ds3_ds4_for_olmo.ipynb: clones the two
 source annotation repos, reclassifies them into DS4 (cropland status) and
 DS3 (crop type), and exports both in OLMO-ready CSV/GeoJSON to
-olmo_trainsets/. Run from this directory with the 'geospatial' conda env:
+olmo_trainsets/. Run from this directory after installing the dependencies:
 
+    pip install -r requirements.txt
     python main.py
 
 The notebook covers the same pipeline plus data exploration (spatial and
