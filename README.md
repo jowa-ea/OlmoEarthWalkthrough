@@ -30,12 +30,7 @@ README there for column/class documentation):
 - **DS3** — crop type on confirmed cropland (Winter cereals / Rapeseed /
   Summer crop), from `Uk_sample_units_22-25` (2022–2025).
 
-Both are reproduced from public GitHub repos only. The production
-versions of these datasets used operationally in the broader Ukraine
-winter-crop mapping pipeline additionally blend in 2026 annotations
-that live outside these two repos — this workshop notebook
-intentionally reproduces the repo-sourced core only, to keep a clean
-"two repos in → two datasets out" story.
+Both are reproduced from public GitHub repos only.
 
 ## Folder contents
 
