@@ -8,8 +8,8 @@ rows/features each (OLMO's per-file limit).
 
 These are the **repo-only** counterparts of DS3/DS4 from the broader
 Ukraine winter-crop mapping pipeline. The production versions used
-operationally there additionally blend in 2026 stac-annotator
-annotations not covered by these two public repos.
+operationally there additionally blend in 2026 annotations not covered
+by these two public repos.
 
 ---
 

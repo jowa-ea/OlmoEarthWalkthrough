@@ -32,8 +32,8 @@ README there for column/class documentation):
 
 Both are reproduced from public GitHub repos only. The production
 versions of these datasets used operationally in the broader Ukraine
-winter-crop mapping pipeline additionally blend in 2026 stac-annotator
-annotations that live outside these two repos — this workshop notebook
+winter-crop mapping pipeline additionally blend in 2026 annotations
+that live outside these two repos — this workshop notebook
 intentionally reproduces the repo-sourced core only, to keep a clean
 "two repos in → two datasets out" story.
 
