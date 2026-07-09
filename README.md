@@ -1,5 +1,7 @@
 # OLMO Earth walkthrough — preparing reference training data
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jowa-ea/OlmoEarthWalkthrough/blob/main/prepare_ds3_ds4_for_olmo.ipynb)
+
 Workshop material for the OLMO Earth data-prep session. The notebook
 `prepare_ds3_ds4_for_olmo.ipynb` clones two public annotation repositories,
 explores the raw label data, reclassifies it into the class schemes used
