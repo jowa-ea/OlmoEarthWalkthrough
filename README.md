@@ -42,6 +42,8 @@ AI2_workshop_olmo_walkthrough/
 │                                     ~488 KB), used as basemap context for
 │                                     the spatial-distribution plots
 ├── olmo_trainsets/                  DS1 & DS3 outputs + README (tracked)
+├── aois/                            test_oblasts.geojson (Donetska, Sumska,
+│                                     Ternopilska, Mykolaivska) + README
 └── workshop_prep/                   gitignored; repo clones land here at
                                       runtime, regenerated on every run
 ```
