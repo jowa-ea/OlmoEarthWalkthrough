@@ -1,6 +1,6 @@
 #!/usr/bin/env python
-"""Script equivalent of prepare_ds3_ds4_for_olmo.ipynb: clones the two
-source annotation repos, reclassifies them into DS4 (cropland status) and
+"""Script equivalent of prepare_ds1_ds3_for_olmo.ipynb: clones the two
+source annotation repos, reclassifies them into DS1 (cropland status) and
 DS3 (crop type), and exports both in OLMO-ready CSV/GeoJSON to
 olmo_trainsets/. Run from this directory after installing the dependencies:
 
@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).parent
 REPOS_DIR = BASE_DIR / "workshop_prep" / "repos"
 OUTPUT_DIR = BASE_DIR / "olmo_trainsets"
 
-DS4_COLUMNS = ["longitude", "latitude", "time", "year", "original_class",
+DS1_COLUMNS = ["longitude", "latitude", "time", "year", "original_class",
                "class_cropland_full", "label_cropland_full"]
 DS3_COLUMNS = ["longitude", "latitude", "time", "year", "fid", "original_class",
                "class_crop_type", "label_crop_type"]
@@ -42,11 +42,11 @@ def main() -> None:
     gpkg_raw = pu.load_gpkgs(gpkg_dir)
     print(f"  {len(gpkg_raw)} points loaded")
 
-    print("\nBuilding DS4 (cropland status) ...")
-    ds4 = pu.build_ds4(cis_raw)
-    pu.validate_olmo_format(ds4)
-    ds4_paths = pu.export_csv(ds4, OUTPUT_DIR, "ds4_cropland_full_21-24", DS4_COLUMNS)
-    ds4_paths += pu.export_geojson(ds4, OUTPUT_DIR, "ds4_cropland_full_21-24", DS4_COLUMNS)
+    print("\nBuilding DS1 (cropland status) ...")
+    ds1 = pu.build_ds1(cis_raw)
+    pu.validate_olmo_format(ds1)
+    ds1_paths = pu.export_csv(ds1, OUTPUT_DIR, "ds1_cropland_full_21-24", DS1_COLUMNS)
+    ds1_paths += pu.export_geojson(ds1, OUTPUT_DIR, "ds1_cropland_full_21-24", DS1_COLUMNS)
 
     print("\nBuilding DS3 (crop type) ...")
     ds3 = pu.build_ds3(gpkg_raw)
@@ -55,7 +55,7 @@ def main() -> None:
     ds3_paths += pu.export_geojson(ds3, OUTPUT_DIR, "ds3_crop_types_22-25", DS3_COLUMNS)
 
     print("\nWritten:")
-    for p in ds4_paths + ds3_paths:
+    for p in ds1_paths + ds3_paths:
         print(" ", p)
 
 

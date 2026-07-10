@@ -1,9 +1,9 @@
 # OLMO Earth walkthrough — preparing reference training data
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jowa-ea/OlmoEarthWalkthrough/blob/main/prepare_ds3_ds4_for_olmo.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jowa-ea/OlmoEarthWalkthrough/blob/main/prepare_ds1_ds3_for_olmo.ipynb)
 
 Workshop material for the OLMO Earth data-prep session. The notebook
-`prepare_ds3_ds4_for_olmo.ipynb` clones two public annotation repositories,
+`prepare_ds1_ds3_for_olmo.ipynb` clones two public annotation repositories,
 explores the raw label data, reclassifies it into the class schemes used
 to train Ukraine winter-crop models, and exports the result in the two
 file formats [OLMO Earth](https://olmoearth.allenai.org/) accepts for
@@ -12,7 +12,7 @@ reference/training data (CSV, GeoJSON).
 ## Run it
 
 - **Locally**: create a Python environment, install the dependencies
-  (`pip install -r requirements.txt`), open `prepare_ds3_ds4_for_olmo.ipynb`
+  (`pip install -r requirements.txt`), open `prepare_ds1_ds3_for_olmo.ipynb`
   in Jupyter with that environment as the kernel, and run all cells from
   this folder.
 - **Google Colab**: open the notebook in Colab and run all cells — the
@@ -25,7 +25,7 @@ reference/training data (CSV, GeoJSON).
 Two point-based reference datasets, written to `olmo_trainsets/` (see the
 README there for column/class documentation):
 
-- **DS4** — cropland status (Cropland / Non-cropland / Abandoned /
+- **DS1** — cropland status (Cropland / Non-cropland / Abandoned /
   Fallow), from `Ukraine_CIS_annotations_2021-2024` (2021–2024).
 - **DS3** — crop type on confirmed cropland (Winter cereals / Rapeseed /
   Summer crop), from `Uk_sample_units_22-25` (2022–2025).
@@ -36,12 +36,12 @@ Both are reproduced from public GitHub repos only.
 
 ```
 AI2_workshop_olmo_walkthrough/
-├── prepare_ds3_ds4_for_olmo.ipynb   notebook (this is the deliverable)
+├── prepare_ds1_ds3_for_olmo.ipynb   notebook (this is the deliverable)
 ├── data/
 │   └── oblasts_simplified.geojson   Ukraine oblast boundaries (simplified,
 │                                     ~488 KB), used as basemap context for
 │                                     the spatial-distribution plots
-├── olmo_trainsets/                  DS3 & DS4 outputs + README (tracked)
+├── olmo_trainsets/                  DS1 & DS3 outputs + README (tracked)
 └── workshop_prep/                   gitignored; repo clones land here at
                                       runtime, regenerated on every run
 ```

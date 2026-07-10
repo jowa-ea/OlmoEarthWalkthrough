@@ -1,7 +1,7 @@
-"""Shared data-loading, reclassification, and export logic for the DS3/DS4
+"""Shared data-loading, reclassification, and export logic for the DS1/DS3
 OLMO Earth workshop pipeline.
 
-Used by both prepare_ds3_ds4_for_olmo.ipynb and main.py so the notebook
+Used by both prepare_ds1_ds3_for_olmo.ipynb and main.py so the notebook
 (exploration/teaching) and the script (headless local run) stay in sync.
 """
 
@@ -22,9 +22,9 @@ DATA_REPOS = {
     "Uk_sample_units_22-25": "https://github.com/jowa-ea/Uk_sample_units_22-25.git",
 }
 
-# DS4 -- cropland status, reclassified from CIS_annotations_2021-2024
-DS4_ENCODING = {"Cultivated": 1, "Non-crop": 2, "Abandoned": 3, "Fallow": 4}
-DS4_LABELS = {1: "Cropland", 2: "Non-cropland", 3: "Abandoned", 4: "Fallow"}
+# DS1 -- cropland status, reclassified from CIS_annotations_2021-2024
+DS1_ENCODING = {"Cultivated": 1, "Non-crop": 2, "Abandoned": 3, "Fallow": 4}
+DS1_LABELS = {1: "Cropland", 2: "Non-cropland", 3: "Abandoned", 4: "Fallow"}
 
 # DS3 -- crop type on confirmed cropland, reclassified from Uk_sample_units_22-25
 DS3_ENCODING = {"Winter_cer": 1, "Rapeseed": 2, "Summer_cro": 3}
@@ -93,16 +93,16 @@ def load_gpkgs(gpkg_dir: Path, years: list[int] = GPKG_YEARS) -> pd.DataFrame:
     return pd.concat([read_gpkg(gpkg_dir, year) for year in years], ignore_index=True)
 
 
-def build_ds4(cis_raw: pd.DataFrame) -> pd.DataFrame:
-    """Reclassify raw CIS labels into the DS4 cropland-status scheme."""
-    unknown = set(cis_raw["original_class"]) - set(DS4_ENCODING)
+def build_ds1(cis_raw: pd.DataFrame) -> pd.DataFrame:
+    """Reclassify raw CIS labels into the DS1 cropland-status scheme."""
+    unknown = set(cis_raw["original_class"]) - set(DS1_ENCODING)
     if unknown:
         raise ValueError(f"Unknown CIS labels encountered: {unknown}")
-    ds4 = cis_raw.copy()
-    ds4["class_cropland_full"] = ds4["original_class"].map(DS4_ENCODING)
-    ds4["label_cropland_full"] = ds4["class_cropland_full"].map(DS4_LABELS)
-    ds4["time"] = ds4["year"].astype(str) + "-04-15"
-    return ds4
+    ds1 = cis_raw.copy()
+    ds1["class_cropland_full"] = ds1["original_class"].map(DS1_ENCODING)
+    ds1["label_cropland_full"] = ds1["class_cropland_full"].map(DS1_LABELS)
+    ds1["time"] = ds1["year"].astype(str) + "-04-15"
+    return ds1
 
 
 def build_ds3(gpkg_raw: pd.DataFrame) -> pd.DataFrame:
