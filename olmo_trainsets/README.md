@@ -6,11 +6,6 @@ in this folder's parent directory. Both datasets carry an
 `{year}-04-15`, and are split into `_partNNN` files of up to 100,000
 rows/features each (OLMO's per-file limit).
 
-These are the **repo-only** counterparts of DS1/DS3 from the broader
-Ukraine winter-crop mapping pipeline. The production versions used
-operationally there additionally blend in 2026 annotations not covered
-by these two public repos.
-
 ---
 
 ## DS1 — Cropland status (`ds1_cropland_full_21-24`)

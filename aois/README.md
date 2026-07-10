@@ -4,9 +4,8 @@ Oblast-level areas of interest, used to define where OLMO Earth
 inference/evaluation runs, separate from the point-based training sets
 in `olmo_trainsets/`.
 
-Source: `OLMO_training/data/admin1/oblasts_geojson/` (admin1 boundary
-layer from the broader Ukraine winter-crop mapping pipeline, not part of
-this repo; 25 oblast-level units total).
+Derived from Ukraine admin1 (oblast) boundaries, 25 oblast-level units
+total.
 
 Format (both files): GeoJSON, EPSG:4326 (CRS84), one
 `Polygon`/`MultiPolygon` feature per oblast, single property `oblast`
