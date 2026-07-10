@@ -42,8 +42,8 @@ AI2_workshop_olmo_walkthrough/
 │                                     ~488 KB), used as basemap context for
 │                                     the spatial-distribution plots
 ├── olmo_trainsets/                  DS1 & DS3 outputs + README (tracked)
-├── aois/                            oblast AOIs for OLMO inference: the 4
-│                                     test oblasts (merged + individual) and
+├── aois/                            oblast AOIs for OLMO inference:
+│                                     test_oblasts.geojson (4 held-out) and
 │                                     other_oblasts.geojson (remaining 21)
 └── workshop_prep/                   gitignored; repo clones land here at
                                       runtime, regenerated on every run

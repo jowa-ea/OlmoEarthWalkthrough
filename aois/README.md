@@ -8,7 +8,7 @@ Source: `OLMO_training/data/admin1/oblasts_geojson/` (admin1 boundary
 layer from the broader Ukraine winter-crop mapping pipeline, not part of
 this repo; 25 oblast-level units total).
 
-Format (all files): GeoJSON, EPSG:4326 (CRS84), one
+Format (both files): GeoJSON, EPSG:4326 (CRS84), one
 `Polygon`/`MultiPolygon` feature per oblast, single property `oblast`
 (name). No `time` property — these are spatial AOI definitions, not
 training/reference datasets.
@@ -17,8 +17,5 @@ training/reference datasets.
 
 - **`test_oblasts.geojson`** — the four held-out test oblasts merged
   into one FeatureCollection: Donetska, Sumska, Ternopilska, Mykolaivska.
-- **`Donetska.geojson`, `Sumska.geojson`, `Ternopilska.geojson`,
-  `Mykolaivska.geojson`** — the same four test oblasts as individual
-  single-feature files.
 - **`other_oblasts.geojson`** — the remaining 21 oblasts (everything
   except the four test oblasts above), merged into one FeatureCollection.
